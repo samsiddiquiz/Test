@@ -5,7 +5,7 @@ on:
 jobs:
   build-and-sign:
     runs-on: windows-latest
-    name: Build app and sign files with Trusted Signing
+    name: Build app and sign files with Trusted Signings
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,7 +20,7 @@ jobs:
           trusted-signing-account-name: IDDCodeSigning
           certificate-profile-name: CodeSigning
           files-folder: ${{ github.workspace }}\Files
-          files-folder-filter: dll
+          files-folder-filter: app
           file-digest: SHA256
           timestamp-rfc3161: http://timestamp.acs.microsoft.com
           timestamp-digest: SHA256

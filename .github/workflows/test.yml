@@ -13,9 +13,9 @@ jobs:
       - name: Sign files with Trusted Signing
         uses: azure/trusted-signing-action@v0.3.20
         with:
-          azure-tenant-id: 6ad3d2c9-98b3-4af3-99fd-aa0e5d844437
-          azure-client-id: d5d20811-1c1e-42ff-b323-e272786efeaa
-          azure-client-secret: ada0c7ee-1ca8-4708-9cb0-7f9b7ba5d9ce
+          azure-tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          azure-client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          azure-client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           endpoint: https://eus.codesigning.azure.net/
           trusted-signing-account-name: IDDCodeSigning
           certificate-profile-name: CodeSigning

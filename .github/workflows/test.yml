@@ -18,7 +18,7 @@ jobs:
           azure-client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           endpoint: https://eus.codesigning.azure.net/
           trusted-signing-account-name: IDDCodeSigning
-          certificate-profile-name: CodeSigning
+          certificate-profile-name: CodeSigningPublic
           files-folder: ${{ github.workspace }}\Files
           files-folder-filter: app
           file-digest: SHA256
